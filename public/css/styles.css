@@ -20,6 +20,7 @@
   button {
     border: none;
     background: #265f82;
+    background: #48465e;
     color: white;
     cursor: pointer;
     padding: 10px;
@@ -29,6 +30,7 @@
   button:hover {
     border: none;
     background: #1F4C69;
+    background: #252647;
     color: white;
     padding: 10px;
   }
@@ -36,6 +38,7 @@
   button:disabled {
     cursor: default;
     background: #698ea5;
+    background: #8c8c8c;
   }
   
   .centered-form {
@@ -50,13 +53,16 @@
     background: -o-linear-gradient(125deg, rgba(39,107,130,1) 0%, rgba(49,84,129,1) 100%); /* opera 11.10+ */
     background: -ms-linear-gradient(125deg, rgba(39,107,130,1) 0%, rgba(49,84,129,1) 100%); /* ie10+ */
     background: linear-gradient(325deg, rgba(39,107,130,1) 0%, rgba(49,84,129,1) 100%); /* w3c */
+
+    background-image: radial-gradient(circle, #8c8c8c, #696874, #48465e, #252647, #000532);  
   }
   
   .centered-form__form {
     background: rgba(250, 250, 250, 0.9);
     border: 1px solid #e1e1e1;
-    border-radius: 5px;
-    padding: 0px 20px;
+    border-radius: 3px;
+    box-shadow: 0px 5px 10px #151515;
+    padding: 20px 20px 10px 20px;
     margin: 20px;
     width: 230px;
   }
@@ -93,6 +99,8 @@
     background: -o-linear-gradient(125deg, rgba(39,107,130,1) 0%, rgba(49,84,129,1) 100%); /* opera 11.10+ */
     background: -ms-linear-gradient(125deg, rgba(39,107,130,1) 0%, rgba(49,84,129,1) 100%); /* ie10+ */
     background: linear-gradient(325deg, rgba(39,107,130,1) 0%, rgba(49,84,129,1) 100%); /* w3c */
+    
+    background-image: linear-gradient(to top, #8c8c8c, #696874, #48465e, #252647, #000532);
   }
   
   .chat__sidebar h3 {
@@ -108,9 +116,32 @@
   .chat__sidebar li {
     background: #e6eaee;
     border: 1px solid #e1e1e1;
-    border-radius: 5px;
+    border-radius: 2px;
     padding: 10px;
     margin: 10px;
+    box-shadow: 0px 5px 10px #171717;
+  }
+
+  .exit-button {
+    background: #e6eaee;
+    border-radius: 2px;
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0px 5px 10px #171717;
+    color: black!important;
+  }
+
+  .exit{
+    text-align: center;
+  }
+
+  .exit-button:hover {
+    background: #a2a6a9;
+  }
+
+  .exit-sm-screen {
+    display: none;
   }
   
   .chat__main {
@@ -155,8 +186,12 @@
   }
   
   .message {
-    padding: 10px;
+    margin: 10px;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px #888888;
   }
+
   
   .message__title {
     display: flex;
@@ -175,6 +210,11 @@
   @media (max-width: 600px) {
     * {
       font-size: 1rem;
+    }
+
+    .exit-sm-screen {
+      display: block;
+      margin: 10px 0;
     }
   
     .chat__sidebar {

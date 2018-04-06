@@ -113,3 +113,13 @@ locationButton.on('click', function(e) {
         alert('Unable to fetch location.');
     });
 });
+
+var exitButton = $('#exit-button');
+exitButton.on('click', function() {
+    window.location.href = '/'
+});
+
+var exitButtonSmall = $('#exit-button-sm-screen');
+exitButtonSmall.on('click', function() {
+    window.location.href = '/'
+});
